@@ -16,4 +16,8 @@ app.get('/funny/', function(req, res) {
     res.send('swag');
 });
 
+app.get("/json", function(req, res) {
+    res.json({ "message": "Hello json" });
+});
+
 module.exports = app;
