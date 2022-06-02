@@ -22,6 +22,9 @@ app.get('/funny/', function(req, res) {
     res.send('swag');
 });
 
+app.get('/:word/echo', function(req, res) {
+    res.json({ echo: req.params.word });
+});
 
 
 app.get('/now', function(req, res, next) {
