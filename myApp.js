@@ -26,6 +26,12 @@ app.get('/:word/echo', function(req, res) {
     res.json({ echo: req.params.word });
 });
 
+app.route('/name')
+    .get(function(req, res) {
+        res.json({ name: req.query.firstname + " " + req.query.lastname });
+    });
+
+
 
 app.get('/now', function(req, res, next) {
     req.time = new Date().toString();
